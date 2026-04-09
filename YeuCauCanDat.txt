@@ -1,0 +1,15 @@
+NHỮNG LƯU Ý QUAN TRỌNG KHI THỰC HIỆN ĐỀ TÀI - QUẢN LÝ ĐIỂM SINH VIÊN - WEB + MongoDB
+
+1. Các thành phần cần có
+- Sitemap của Website
+- Giới thiệu thành viên
+- Đăng nhập
+- Trang thông tin sự kiện (Có thể xem được ở màn hình đăng nhập) - Có thể làm cứng
+- Trang xem chi tiết thông tin sự kiện (Có thể xem được ở màn hình đăng nhập) - Có thể làm cứng
+- Quản lý điểm (Dữ liệu cứng có sẵn danh sách sinh viên theo tài khoản, có một số tài khoản test)
+- Nhập điểm theo form mẫu, chưa cần thiết kế theo dạng excel, có thêm các chức năng như filter và thống kê điểm số để có thể áp dụng MongoDB
+
+- Tài liệu báo cáo Website, theo dạng phân tích thiết kế hệ thống (cô sẽ gửi sườn sau) 
+
+2. Tiêu chí đánh giá
+- Áp dụng được HTML, CSS, Javascript, Jquery, Bootstrap 
