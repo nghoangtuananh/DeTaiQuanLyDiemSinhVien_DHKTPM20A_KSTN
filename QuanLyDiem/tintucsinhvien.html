@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức - Sự Kiện - Quản Lý Điểm</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/tintuc.css">
+</head>
+
+<body>
+    <!-- ============ SIDEBAR ============ -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-wrapper">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <h4>Bảng Điểm Sinh Viên</h4>
+            <p id="studentNameDisplay" class="text-light"></p>
+            <p id="studentIdDisplay" class="text-light"></p>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="nav-item">
+                <a href="bangdiemcanhan.html">
+                    <i class="bi bi-table"></i>
+                    <span>Bảng Điểm</span>
+                </a>
+            </li>
+
+            <li class="nav-item active">
+                <a href="tintucsinhvien.html">
+                    <i class="bi bi-newspaper"></i>
+                    <span>Tin Tức - Sự Kiện</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="gioithieuthanhvien.html">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Giới thiệu thành viên</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="sitemap.html">
+                    <i class="bi bi-diagram-3-fill"></i>
+                    <span>SiteMap</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="taikhoansinhvien.html" class="user-info" role="button" title="Thông tin tài khoản">
+                <div class="avatar">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="user-detail">
+                    <span class="user-name" id="sidebarStudentName">Sinh Viên</span>
+                    <span class="user-role" id="profileMssv">MSSV</span>
+                </div>
+                <div class="user-chevron">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============ TOGGLE BUTTON (Mobile) ============ -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main-content" id="mainContent">
+        <div class="page-header">
+            <div>
+                <h2><i class="bi bi-newspaper me-2"></i>Tin Tức - Sự Kiện</h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <div class="news-card-img news-img-announcement" id="card-1">
+                        <span class="news-badge badge-announcement"><i class="bi bi-megaphone-fill me-1"></i>Thông
+                            báo</span>
+                        <div class="news-img-icon"><i class="bi bi-calendar-check-fill"></i></div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span><i class="bi bi-calendar3 me-1"></i>06/03/2026</span>
+                            <span><i class="bi bi-building me-1"></i>Phòng Đào Tạo</span>
+                        </div>
+                        <h5 class="news-title">Lịch Thi Cuối Kỳ Học Kỳ 2 Năm Học 2025-2026</h5>
+                        <p class="news-excerpt">Phòng Đào Tạo thông báo lịch thi cuối kỳ HK2 năm học 2025-2026 cho tất
+                            cả sinh viên các khoa. Thời gian thi bắt đầu từ ngày 15/04/2026, sinh viên cần kiểm tra lịch
+                            thi cá nhân...</p>
+                        <button class="btn btn-news-read" onclick="window.location.href='doctintucsinhvien.html'">
+                            <i class="bi bi-arrow-right-circle me-1"></i>Đọc thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <div class="news-card-img news-img-event" id="card-2">
+                        <span class="news-badge badge-event"><i class="bi bi-star-fill me-1"></i>Sự kiện</span>
+                        <div class="news-img-icon"><i class="bi bi-cpu-fill"></i></div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span><i class="bi bi-calendar3 me-1"></i>01/03/2026</span>
+                            <span><i class="bi bi-building me-1"></i>Khoa CNTT</span>
+                        </div>
+                        <h5 class="news-title">Hội Thảo Ứng Dụng AI Trong Giáo Dục Đại Học</h5>
+                        <p class="news-excerpt">Khoa Công nghệ Thông tin tổ chức hội thảo khoa học với chủ đề ứng dụng
+                            trí tuệ nhân tạo trong giảng dạy và học tập tại bậc đại học. Sự kiện quy tụ các chuyên gia
+                            hàng đầu...</p>
+                        <button class="btn btn-news-read" onclick="window.location.href='doctintucsinhvien.html'">
+                            <i class="bi bi-arrow-right-circle me-1"></i>Đọc thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <div class="news-card-img news-img-news" id="card-3">
+                        <span class="news-badge badge-news"><i class="bi bi-newspaper me-1"></i>Tin tức</span>
+                        <div class="news-img-icon"><i class="bi bi-trophy-fill"></i></div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span><i class="bi bi-calendar3 me-1"></i>25/02/2026</span>
+                            <span><i class="bi bi-building me-1"></i>Phòng CTSV</span>
+                        </div>
+                        <h5 class="news-title">Học Bổng Khuyến Khích Học Tập HK1 Năm Học 2025-2026</h5>
+                        <p class="news-excerpt">Nhà trường trân trọng thông báo danh sách sinh viên đạt học bổng khuyến
+                            khích học tập HK1 năm học 2025-2026. Tổng số 250 suất học bổng được trao cho sinh viên xuất
+                            sắc...</p>
+                        <button class="btn btn-news-read" onclick="window.location.href='doctintucsinhvien.html'">
+                            <i class="bi bi-arrow-right-circle me-1"></i>Đọc thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <div class="news-card-img news-img-announcement" id="card-4">
+                        <span class="news-badge badge-announcement"><i class="bi bi-megaphone-fill me-1"></i>Thông
+                            báo</span>
+                        <div class="news-img-icon"><i class="bi bi-pencil-square"></i></div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span><i class="bi bi-calendar3 me-1"></i>20/02/2026</span>
+                            <span><i class="bi bi-building me-1"></i>Phòng Đào Tạo</span>
+                        </div>
+                        <h5 class="news-title">Đăng Ký Học Phần Học Kỳ 1 Năm Học 2026-2027</h5>
+                        <p class="news-excerpt">Phòng Đào Tạo thông báo kế hoạch đăng ký học phần HK1 năm học 2026-2027.
+                            Sinh viên vui lòng đăng nhập hệ thống đào tạo để thực hiện đăng ký đúng thời hạn quy định...
+                        </p>
+                        <button class="btn btn-news-read" onclick="window.location.href='doctintucsinhvien.html'">
+                            <i class="bi bi-arrow-right-circle me-1"></i>Đọc thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <div class="news-card-img news-img-event" id="card-5">
+                        <span class="news-badge badge-event"><i class="bi bi-star-fill me-1"></i>Sự kiện</span>
+                        <div class="news-img-icon"><i class="bi bi-code-slash"></i></div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span><i class="bi bi-calendar3 me-1"></i>15/02/2026</span>
+                            <span><i class="bi bi-building me-1"></i>CLB Lập Trình IUH</span>
+                        </div>
+                        <h5 class="news-title">[RECAP] SEMINAR: ỨNG DỤNG AI TRONG LẬP TRÌNH</h5>
+                        <p class="news-excerpt">Chiều ngày 15/01/2026, tại Hội trường A7, Khoa Công nghệ Thông tin đã
+                            phối hợp cùng TMA Tech Group tổ chức buổi seminar với chủ đề “Ứng dụng AI trong lập trình –
+                            Kỹ năng mới cho lập trình viên tương lai”...</p>
+                        <a href="doctintucsinhvien.html" class="btn btn-news-read">
+                            <i class="bi bi-arrow-right-circle me-1"></i>Đọc thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-card">
+                    <div class="news-card-img news-img-news" id="card-6">
+                        <span class="news-badge badge-news"><i class="bi bi-newspaper me-1"></i>Tin tức</span>
+                        <div class="news-img-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span><i class="bi bi-calendar3 me-1"></i>23/03/2026</span>
+                            <span><i class="bi bi-building me-1"></i>Phòng Đào Tạo</span>
+                        </div>
+                        <h5 class="news-title">IUH chi hơn 1 tỉ đồng học bổng cho học viên sau đại học</h5>
+                        <p class="news-excerpt">Không chỉ trao bằng tốt nghiệp, Trường đại học Công nghiệp TP. Hồ Chí
+                            Minh (IUH) còn dành hơn 1 tỉ đồng học bổng để “giữ chân” những...</p>
+                        <button class="btn btn-news-read" onclick="window.location.href='doctintucsinhvien.html'">
+                            <i class="bi bi-arrow-right-circle me-1"></i>Đọc thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ TOAST NOTIFICATION ============ -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;">
+        <div id="toastNotify" class="toast align-items-center text-bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage">
+                    Thao tác thành công!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/common.js"></script>
+    <!-- Tin tức sinh viên JS - Xử lý session và hiển thị sidebar (xem file js/tintucsinhvien.js) -->
+    <script src="js/tintucsinhvien.js"></script>
+</body>
+
+</html>
